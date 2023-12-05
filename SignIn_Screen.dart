@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intern_app/SignUp_Screen.dart';
 class SignInScreen extends StatefulWidget {
   const SignInScreen({super.key});
 
@@ -59,7 +60,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 child: TextField(
                   controller: emailController,
                   decoration: InputDecoration(
-                    hintText: 'Enter Your Email',
+                    hintText: 'example@something.com',
                     prefixIcon: Icon(Icons.email,
                     color: Colors.blue,
                     ),
@@ -67,7 +68,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    contentPadding: EdgeInsets.all(16),
+                   contentPadding: EdgeInsets.all(16),
                   ),
                 ),
               ),
@@ -103,7 +104,9 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
               ),
               GestureDetector(
-                onTap: (){},
+                onTap: (){
+
+                },
                 child: Align(
                   alignment: Alignment.bottomRight,
                   child: Text(
@@ -131,7 +134,17 @@ class _SignInScreenState extends State<SignInScreen> {
               ),
               SizedBox(height: 15),
               Text(
-                'Don\'t have an account? SignUp',
+                'Don\'t have an account?',
+              ),
+              TextButton(onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const SignUpScreen()));
+              }, child: Text(
+                ' SignUp',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
               ),
             ],
           ),
