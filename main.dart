@@ -42,8 +42,9 @@ class MyHomePage extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               height: 400,
-              child: Image.asset('assets/illus.jpeg'),
+              child: Image.asset('assets/home.png'),
             ),
+            SizedBox(height: 40,),
             SizedBox(
               height: 49,
               width: 370,
@@ -73,7 +74,7 @@ class MyHomePage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             SizedBox(
               height: 49,
               width: 370,
